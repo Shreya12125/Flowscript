@@ -1,6 +1,6 @@
 // Day 2 Integration Test
-import { testLexer, testLexerFeatures } from './src/lexer-test.js';
-import { testParser, testASTStructure } from './src/parser-test.js';
+import { testLexer, testLexerFeatures } from '../src/lexer-test.js';
+import { testParser, testASTStructure } from '../src/parser-test.js';
 
 console.log("=== FlowScript Day 2 Integration Test ===\n");
 

@@ -1,7 +1,7 @@
 // Quick test to verify Day 1 implementation
-import { GrammarValidator } from './src/grammar-validator.js';
-import { PATTERNS, matchPattern } from './src/patterns.js';
-import { KEYWORDS } from './src/keywords.js';
+import { GrammarValidator } from '../src/grammar-validator.js';
+import { PATTERNS, matchPattern } from '../src/patterns.js';
+import { KEYWORDS } from '../src/keywords.js';
 
 console.log("=== FlowScript Day 1 Validation ===\n");
 

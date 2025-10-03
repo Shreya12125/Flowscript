@@ -2420,25 +2420,20 @@ else:
     }
 
     toggleManualVisibility() {
-    this.manualVisible = !this.manualVisible;
-    const sidebar = document.querySelector('.sidebar');
-    const main = document.querySelector('.main');
-    const hideBtn = document.getElementById("toggleManual");
-    const showBtn = document.getElementById("showManual");
-
-    if (this.manualVisible) {
-        sidebar.style.display = 'flex';
-        main.style.gridTemplateColumns = '300px 1fr 1fr';
-        hideBtn.style.display = 'inline-block';
-        showBtn.style.display = 'none';
-    } else {
-        sidebar.style.display = 'none';
-        main.style.gridTemplateColumns = '1fr 1fr';
-        hideBtn.style.display = 'none';
-        showBtn.style.display = 'inline-block';
+        this.manualVisible = !this.manualVisible;
+        const sidebar = document.querySelector('.sidebar');
+        const main = document.querySelector('.main');
+        
+        if (this.manualVisible) {
+            sidebar.style.display = 'flex';
+            main.style.gridTemplateColumns = '300px 1fr 1fr';
+            this.toggleManual.textContent = 'Hide';
+        } else {
+            sidebar.style.display = 'none';
+            main.style.gridTemplateColumns = '1fr 1fr';
+            this.toggleManual.textContent = 'Show';
+        }
     }
-}
-
 }
 
 // Initialize IDE

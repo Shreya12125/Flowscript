@@ -1,7 +1,7 @@
 // Day 3 Integration Test
-import { testInterpreter, testErrorHandling } from './src/interpreter-test.js';
-import { Parser } from './src/parser.js';
-import { Interpreter } from './src/interpreter.js';
+import { testInterpreter, testErrorHandling } from '../src/interpreter-test.js';
+import { Parser } from '../src/parser.js';
+import { Interpreter } from '../src/interpreter.js';
 
 console.log("=== FlowScript Day 3 Integration Test ===\n");
 
