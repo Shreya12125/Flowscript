@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowScript Learning Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">FlowScript Learning Guide</h1>
+                <p class="subtitle">Learn Programming Through Natural Language</p>
+            </div>
+            <div class="header-actions">
+                <a href="index.html" class="btn btn-primary">Back to IDE</a>
+            </div>
+        </header>
+        
+        <main class="main" style="grid-template-columns: 1fr; max-width: 1000px; margin: 0 auto; padding: 2rem;">
+            <div class="editor-section">
+                <div class="section-header">
+                    <h2>Complete FlowScript Tutorial</h2>
+                </div>
+                <div style="padding: 2rem; line-height: 1.8; color: var(--color-text);">
+                    
+                    <div class="manual-section">
+                        <h3>Welcome to FlowScript!</h3>
+                        <p>FlowScript is a programming language that uses natural English phrases instead of cryptic symbols. If you can write a sentence, you can write code!</p>
+                        <p><strong>What you'll learn:</strong></p>
+                        <ul>
+                            <li>How to store information in variables</li>
+                            <li>How to perform calculations and logic</li>
+                            <li>How to make decisions in your programs</li>
+                            <li>How to repeat actions efficiently</li>
+                            <li>How to organize code into reusable functions</li>
+                            <li>How to work with collections of data</li>
+                        </ul>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-1">
+                        <h2>Lesson 1: Variables - Storing Information</h2>
+                        <p><strong>What is a variable?</strong> Think of a variable as a labeled box where you can store a value. You give it a name, and you can put something inside it.</p>
+                        
+                        <h4>Creating Number Variables</h4>
+                        <p>Numbers are used for counting, calculations, ages, prices, scores, and anything involving math.</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>Create a number called [name] with value [number]</code><br><br>
+                            <strong>Examples:</strong><br>
+                            <code>Create a number called age with value 25</code><br>
+                            <code>Create a number called score with value 100</code><br>
+                            <code>Create a number called price with value 49.99</code><br>
+                            <code>Create a number called temperature with value -5</code>
+                        </div>
+                        <p><strong>Key points:</strong></p>
+                        <ul>
+                            <li>Variable names should be descriptive (use <code>studentAge</code> not <code>x</code>)</li>
+                            <li>Numbers can be whole (10) or decimal (10.5)</li>
+                            <li>Numbers can be negative (-15)</li>
+                        </ul>
+
+                        <h4>Creating Text Variables</h4>
+                        <p>Text (also called "strings") stores words, sentences, names, messages - anything you want to display or work with as text.</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>Create a text called [name] with value "[text]"</code><br><br>
+                            <strong>Examples:</strong><br>
+                            <code>Create a text called name with value "Alice"</code><br>
+                            <code>Create a text called greeting with value "Hello, World!"</code><br>
+                            <code>Create a text called city with value "New York"</code><br>
+                            <code>Create a text called message with value "Welcome to FlowScript"</code>
+                        </div>
+                        <p><strong>Key points:</strong></p>
+                        <ul>
+                            <li>Text must be surrounded by quotes: "like this"</li>
+                            <li>Text can contain spaces, punctuation, and numbers</li>
+                            <li>Text and numbers are different: "25" is text, 25 is a number</li>
+                        </ul>
+
+                        <h4>Creating Boolean Variables</h4>
+                        <p>Booleans store true/false values. They're perfect for yes/no questions, on/off states, or any situation with two possibilities.</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>Create a boolean called [name] with value [true/false]</code><br><br>
+                            <strong>Examples:</strong><br>
+                            <code>Create a boolean called isStudent with value true</code><br>
+                            <code>Create a boolean called hasLicense with value false</code><br>
+                            <code>Create a boolean called isRaining with value true</code><br>
+                            <code>Create a boolean called gameOver with value false</code>
+                        </div>
+                        <p><strong>Key points:</strong></p>
+                        <ul>
+                            <li>Only two possible values: <code>true</code> or <code>false</code></li>
+                            <li>No quotes around true/false</li>
+                            <li>Used for conditions and decision-making</li>
+                        </ul>
+
+                        <h4>Changing Variable Values</h4>
+                        <p>Once created, you can update a variable's value:</p>
+                        <div class="syntax-example">
+                            <code>Set age to 26</code><br>
+                            <code>Set name to "Bob"</code><br>
+                            <code>Set isActive to false</code><br>
+                            <code>Increase score by 10</code><br>
+                            <code>Decrease lives by 1</code>
+                        </div>
+
+                        <h4>Practice Exercise 1</h4>
+                        <div class="syntax-example">
+                            <strong>Try this in the IDE:</strong><br>
+                            <code>Create a number called myAge with value 20</code><br>
+                            <code>Create a text called myName with value "Student"</code><br>
+                            <code>Create a boolean called isLearning with value true</code><br>
+                            <code>Say "Variables created successfully!"</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-2">
+                        <h2>Lesson 2: Output - Showing Information</h2>
+                        <p><strong>What is output?</strong> Output is how your program communicates with users. It displays information on the screen.</p>
+
+                        <h4>The Say Command</h4>
+                        <p>The most common way to show information:</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>Say [value or text]</code><br><br>
+                            <strong>Examples:</strong><br>
+                            <code>Say "Hello, World!"</code><br>
+                            <code>Say age</code><br>
+                            <code>Say 42</code><br>
+                            <code>Say isActive</code>
+                        </div>
+
+                        <h4>Alternative Output Commands</h4>
+                        <div class="syntax-example">
+                            <code>Display "Welcome!"</code><br>
+                            <code>Print score</code><br>
+                            <code>Show message</code>
+                        </div>
+                        <p>These all do the same thing - pick the one that reads most naturally to you!</p>
+
+                        <h4>Combining Text with Variables</h4>
+                        <p>Use <code>plus</code> to join text and variables together:</p>
+                        <div class="syntax-example">
+                            <code>Say "Your name is " plus name</code><br>
+                            <code>Say "You scored " plus score plus " points"</code><br>
+                            <code>Say "Temperature: " plus temperature plus " degrees"</code><br>
+                            <code>Display "Welcome, " plus userName plus "!"</code>
+                        </div>
+
+                        <h4>Practice Exercise 2</h4>
+                        <div class="syntax-example">
+                            <strong>Try this:</strong><br>
+                            <code>Create a text called favoriteColor with value "blue"</code><br>
+                            <code>Create a number called favoriteNumber with value 7</code><br>
+                            <code>Say "My favorite color is " plus favoriteColor</code><br>
+                            <code>Say "My favorite number is " plus favoriteNumber</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-3">
+                        <h2>Lesson 3: Arithmetic - Doing Math</h2>
+                        <p><strong>Why arithmetic?</strong> Computers excel at calculations. Let's use that power!</p>
+
+                        <h4>Basic Operations</h4>
+                        <div class="syntax-example">
+                            <strong>Addition:</strong> <code>plus</code><br>
+                            <code>Say 5 plus 3</code> → outputs 8<br>
+                            <code>Say age plus 10</code><br><br>
+
+                            <strong>Subtraction:</strong> <code>minus</code><br>
+                            <code>Say 10 minus 4</code> → outputs 6<br>
+                            <code>Say price minus discount</code><br><br>
+
+                            <strong>Multiplication:</strong> <code>times</code><br>
+                            <code>Say 6 times 7</code> → outputs 42<br>
+                            <code>Say length times width</code><br><br>
+
+                            <strong>Division:</strong> <code>divided by</code><br>
+                            <code>Say 20 divided by 4</code> → outputs 5<br>
+                            <code>Say total divided by count</code><br><br>
+
+                            <strong>Remainder:</strong> <code>modulo</code><br>
+                            <code>Say 10 modulo 3</code> → outputs 1<br>
+                            <code>Say number modulo 2</code> (useful for checking even/odd)
+                        </div>
+
+                        <h4>Storing Calculation Results</h4>
+                        <div class="syntax-example">
+                            <code>Create a number called sum with value x plus y</code><br>
+                            <code>Create a number called area with value length times width</code><br>
+                            <code>Create a number called average with value total divided by count</code><br>
+                            <code>Set result to a times b plus c</code>
+                        </div>
+
+                        <h4>Complex Expressions</h4>
+                        <p>You can combine multiple operations:</p>
+                        <div class="syntax-example">
+                            <code>Say 5 plus 3 times 2</code> → outputs 11<br>
+                            <code>Say (5 plus 3) times 2</code> → outputs 16<br>
+                            <code>Create a number called total with value price times quantity plus tax</code>
+                        </div>
+
+                        <h4>Practice Exercise 3</h4>
+                        <div class="syntax-example">
+                            <strong>Calculate the area of a rectangle:</strong><br>
+                            <code>Create a number called length with value 10</code><br>
+                            <code>Create a number called width with value 5</code><br>
+                            <code>Create a number called area with value length times width</code><br>
+                            <code>Say "The area is " plus area plus " square units"</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-4">
+                        <h2>Lesson 4: Comparisons - Testing Conditions</h2>
+                        <p><strong>Why comparisons?</strong> Programs need to make decisions based on whether something is true or false. Comparisons test relationships between values.</p>
+
+                        <h4>Comparison Operators</h4>
+                        <div class="syntax-example">
+                            <strong>Greater than:</strong><br>
+                            <code>age is greater than 18</code><br>
+                            <code>score is greater than 100</code><br><br>
+
+                            <strong>Less than:</strong><br>
+                            <code>temperature is less than 0</code><br>
+                            <code>speed is less than 60</code><br><br>
+
+                            <strong>Greater than or equal to:</strong><br>
+                            <code>age is greater than or equal to 21</code><br>
+                            <code>score is greater than or equal to passingScore</code><br><br>
+
+                            <strong>Less than or equal to:</strong><br>
+                            <code>temperature is less than or equal to 32</code><br>
+                            <code>attempts is less than or equal to 3</code><br><br>
+
+                            <strong>Equals:</strong><br>
+                            <code>name equals "Alice"</code><br>
+                            <code>answer equals 42</code><br><br>
+
+                            <strong>Not equals:</strong><br>
+                            <code>status is not equal to "complete"</code><br>
+                            <code>count is not equal to 0</code>
+                        </div>
+
+                        <h4>Understanding True and False</h4>
+                        <div class="syntax-example">
+                            <code>25 is greater than 18</code> → true<br>
+                            <code>10 is less than 5</code> → false<br>
+                            <code>"cat" equals "dog"</code> → false<br>
+                            <code>5 plus 5 equals 10</code> → true
+                        </div>
+
+                        <h4>Practice Exercise 4</h4>
+                        <div class="syntax-example">
+                            <strong>Test some comparisons:</strong><br>
+                            <code>Create a number called myScore with value 85</code><br>
+                            <code>Create a number called passingScore with value 60</code><br>
+                            <code>Create a boolean called passed with value myScore is greater than or equal to passingScore</code><br>
+                            <code>Say "Did I pass? " plus passed</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-5">
+                        <h2>Lesson 5: Logical Operators - Combining Conditions</h2>
+                        <p><strong>Why logical operators?</strong> Sometimes you need to check multiple conditions at once, like "Is it both sunny AND warm?" or "Is it either Saturday OR Sunday?"</p>
+
+                        <h4>AND Operator</h4>
+                        <p>Both conditions must be true for the result to be true.</p>
+                        <div class="syntax-example">
+                            <code>age is greater than 18 AND hasLicense equals true</code><br>
+                            <code>score is greater than 90 AND attendance is greater than 80</code><br>
+                            <code>isWeekend equals true AND isRaining equals false</code>
+                        </div>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>true AND true = true</li>
+                            <li>true AND false = false</li>
+                            <li>false AND false = false</li>
+                        </ul>
+
+                        <h4>OR Operator</h4>
+                        <p>At least one condition must be true for the result to be true.</p>
+                        <div class="syntax-example">
+                            <code>day equals "Saturday" OR day equals "Sunday"</code><br>
+                            <code>score is less than 50 OR attempts is greater than 3</code><br>
+                            <code>isMember equals true OR hasPass equals true</code>
+                        </div>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>true OR true = true</li>
+                            <li>true OR false = true</li>
+                            <li>false OR false = false</li>
+                        </ul>
+
+                        <h4>NOT Operator</h4>
+                        <p>Reverses a condition - makes true become false and false become true.</p>
+                        <div class="syntax-example">
+                            <code>NOT isLocked</code><br>
+                            <code>NOT gameOver</code><br>
+                            <code>NOT (age is less than 18)</code>
+                        </div>
+
+                        <h4>Combining Multiple Operators</h4>
+                        <div class="syntax-example">
+                            <code>age is greater than 18 AND (hasLicense equals true OR hasPermit equals true)</code><br>
+                            <code>score is greater than 90 OR (score is greater than 80 AND extraCredit equals true)</code>
+                        </div>
+
+                        <h4>Practice Exercise 5</h4>
+                        <div class="syntax-example">
+                            <strong>Check eligibility for a movie:</strong><br>
+                            <code>Create a number called age with value 16</code><br>
+                            <code>Create a boolean called withParent with value true</code><br>
+                            <code>Create a boolean called canWatch with value age is greater than or equal to 18 OR withParent equals true</code><br>
+                            <code>Say "Can watch R-rated movie: " plus canWatch</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-6">
+                        <h2>Lesson 6: Conditionals - Making Decisions</h2>
+                        <p><strong>Why conditionals?</strong> Real programs need to make choices. "If the user is logged in, show their profile. Otherwise, show the login page."</p>
+
+                        <h4>Simple If Statement</h4>
+                        <p>For single-line actions when a condition is true:</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>If [condition] then [action]</code><br><br>
+                            <strong>Examples:</strong><br>
+                            <code>If age is greater than 18 then say "Adult"</code><br>
+                            <code>If score equals 100 then say "Perfect score!"</code><br>
+                            <code>If temperature is less than 0 then say "Freezing!"</code>
+                        </div>
+
+                        <h4>Multi-line If Statement</h4>
+                        <p>When you need to do multiple things:</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>If [condition]:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;[action 1]</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;[action 2]</code><br><br>
+                            <strong>Example:</strong><br>
+                            <code>If score is greater than 90:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Excellent work!"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase bonus by 10</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;set grade to "A"</code>
+                        </div>
+                        <p><strong>Important:</strong> Indent the lines inside the If block with spaces!</p>
+
+                        <h4>If-Else Statement</h4>
+                        <p>Do one thing if true, something else if false:</p>
+                        <div class="syntax-example">
+                            <code>If age is greater than or equal to 18:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "You can vote"</code><br>
+                            <code>Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "You cannot vote yet"</code>
+                        </div>
+
+                        <h4>If-Else If-Else Statement</h4>
+                        <p>Check multiple conditions in sequence:</p>
+                        <div class="syntax-example">
+                            <code>If score is greater than or equal to 90:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Grade: A"</code><br>
+                            <code>Else if score is greater than or equal to 80:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Grade: B"</code><br>
+                            <code>Else if score is greater than or equal to 70:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Grade: C"</code><br>
+                            <code>Else if score is greater than or equal to 60:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Grade: D"</code><br>
+                            <code>Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Grade: F"</code>
+                        </div>
+
+                        <h4>Nested Conditionals</h4>
+                        <p>Put if statements inside other if statements:</p>
+                        <div class="syntax-example">
+                            <code>If hasAccount equals true:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;If password equals correctPassword:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say "Welcome back!"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say "Wrong password"</code><br>
+                            <code>Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Please create an account"</code>
+                        </div>
+
+                        <h4>Practice Exercise 6</h4>
+                        <div class="syntax-example">
+                            <strong>Create a temperature checker:</strong><br>
+                            <code>Create a number called temp with value 75</code><br>
+                            <code>If temp is greater than 80:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "It's hot outside!"</code><br>
+                            <code>Else if temp is greater than 60:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Nice weather!"</code><br>
+                            <code>Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "It's cold outside!"</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-7">
+                        <h2>Lesson 7: Loops - Repeating Actions</h2>
+                        <p><strong>Why loops?</strong> Imagine needing to print "Hello" 100 times. Without loops, you'd write 100 lines. With loops, you write 2 lines!</p>
+
+                        <h4>Repeat Loop (Fixed Number of Times)</h4>
+                        <p>When you know exactly how many times to repeat:</p>
+                        <div class="syntax-example">
+                            <strong>Single-line syntax:</strong><br>
+                            <code>Repeat 5 times: say "Hello"</code><br><br>
+                            
+                            <strong>Multi-line syntax:</strong><br>
+                            <code>Repeat 10 times:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Counting..."</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Still counting..."</code><br><br>
+
+                            <strong>Real examples:</strong><br>
+                            <code>Repeat 3 times: say "Hip hip hooray!"</code><br>
+                            <code>Repeat 5 times:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase score by 10</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Score: " plus score</code>
+                        </div>
+
+                        <h4>While Loop (Condition-Based)</h4>
+                        <p>Repeat as long as a condition is true. Great when you don't know how many iterations you need:</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>While [condition]:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;[actions]</code><br><br>
+
+                            <strong>Example - Count from 1 to 10:</strong><br>
+                            <code>Create a number called counter with value 1</code><br>
+                            <code>While counter is less than or equal to 10:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say counter</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase counter by 1</code><br><br>
+
+                            <strong>Example - Keep guessing:</strong><br>
+                            <code>Create a number called guess with value 0</code><br>
+                            <code>Create a number called target with value 7</code><br>
+                            <code>While guess is not equal to target:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Guess again!"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase guess by 1</code>
+                        </div>
+                        <p><strong>Warning:</strong> Make sure your condition eventually becomes false, or you'll create an infinite loop!</p>
+
+                        <h4>For Each Loop (Working with Collections)</h4>
+                        <p>Process every item in a list or array:</p>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>For each [item] in [array]:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;[actions using item]</code><br><br>
+
+                            <strong>Example:</strong><br>
+                            <code>Create an array called names with values ["Alice", "Bob", "Charlie"]</code><br>
+                            <code>For each name in names:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Hello, " plus name</code>
+                        </div>
+
+                        <h4>Nested Loops</h4>
+                        <p>Loops inside loops - powerful but use carefully:</p>
+                        <div class="syntax-example">
+                            <strong>Multiplication table:</strong><br>
+                            <code>Create a number called i with value 1</code><br>
+                            <code>While i is less than or equal to 3:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Create a number called j with value 1</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;While j is less than or equal to 3:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say i plus " times " plus j plus " = " plus (i times j)</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;increase j by 1</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase i by 1</code>
+                        </div>
+
+                        <h4>Practice Exercise 7</h4>
+                        <div class="syntax-example">
+                            <strong>Countdown from 10 to 1:</strong><br>
+                            <code>Create a number called countdown with value 10</code><br>
+                            <code>While countdown is greater than 0:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say countdown</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;decrease countdown by 1</code><br>
+                            <code>Say "Blast off!"</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-8">
+                        <h2>Lesson 8: Functions - Organizing Your Code</h2>
+                        <p><strong>Why functions?</strong> Functions let you write code once and use it many times. They help organize complex programs into manageable pieces.</p>
+
+                        <h4>Basic Function Definition</h4>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>Define function [name] with parameter [param]:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;[function body]</code><br><br>
+
+                            <strong>Simple example:</strong><br>
+                            <code>Define function greet with parameter name:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Hello, " plus name plus "!"</code><br><br>
+
+                            <strong>Calling the function:</strong><br>
+                            <code>Call greet with "Alice"</code><br>
+                            <code>Call greet with "Bob"</code><br>
+                            <code>Call greet with "Charlie"</code>
+                        </div>
+
+                        <h4>Functions with Multiple Parameters</h4>
+                        <div class="syntax-example">
+                            <code>Define function add with parameters a and b:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Create a number called sum with value a plus b</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say sum</code><br><br>
+
+                            <code>Call add with 5 and 3</code><br>
+                            <code>Call add with 10 and 20</code>
+                        </div>
+
+                        <h4>Functions That Return Values</h4>
+                        <p>Return lets a function send a value back to use elsewhere:</p>
+                        <div class="syntax-example">
+                            <code>Define function multiply with parameters x and y:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;return x times y</code><br><br>
+
+                            <code>Create a number called result with value multiply(4, 5)</code><br>
+                            <code>Say "4 times 5 equals " plus result</code>
+                        </div>
+
+                        <h4>Functions with Logic</h4>
+                        <div class="syntax-example">
+                            <strong>Check if number is even:</strong><br>
+                            <code>Define function isEven with parameter num:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;If num modulo 2 equals 0:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false</code><br><br>
+
+                            <code>Create a boolean called result with value isEven(10)</code><br>
+                            <code>Say "Is 10 even? " plus result</code>
+                        </div>
+
+                        <h4>Recursive Functions</h4>
+                        <p>A function that calls itself - powerful for certain problems:</p>
+                        <div class="syntax-example">
+                            <strong>Calculate factorial (5! = 5 × 4 × 3 × 2 × 1):</strong><br>
+                            <code>Define function factorial with parameter n:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;If n is less than or equal to 1:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return n times factorial(n minus 1)</code><br><br>
+
+                            <code>Say factorial(5)</code> → outputs 120
+                        </div>
+
+                        <h4>Practice Exercise 8</h4>
+                        <div class="syntax-example">
+                            <strong>Create a greeting function:</strong><br>
+                            <code>Define function greetPerson with parameters name and age:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Hello, " plus name</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "You are " plus age plus " years old"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;If age is greater than or equal to 18:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say "You are an adult"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;say "You are a minor"</code><br><br>
+
+                            <code>Call greetPerson with "Alice" and 25</code><br>
+                            <code>Call greetPerson with "Bob" and 16</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-9">
+                        <h2>Lesson 9: Arrays - Working with Collections</h2>
+                        <p><strong>Why arrays?</strong> Often you need to store multiple related values. Instead of creating score1, score2, score3... you can use one array to hold all scores!</p>
+
+                        <h4>Creating Arrays</h4>
+                        <div class="syntax-example">
+                            <strong>Syntax:</strong><br>
+                            <code>Create an array called [name] with values [list]</code><br><br>
+
+                            <strong>Number arrays:</strong><br>
+                            <code>Create an array called scores with values [85, 90, 78, 92, 88]</code><br>
+                            <code>Create an array called prices with values [9.99, 19.99, 14.99]</code><br><br>
+
+                            <strong>Text arrays:</strong><br>
+                            <code>Create an array called names with values ["Alice", "Bob", "Charlie"]</code><br>
+                            <code>Create an array called cities with values ["New York", "London", "Tokyo"]</code><br><br>
+
+                            <strong>Empty array:</strong><br>
+                            <code>Create an array called myList with values []</code>
+                        </div>
+
+                        <h4>Accessing Array Elements</h4>
+                        <p>Arrays use index numbers starting at 0:</p>
+                        <div class="syntax-example">
+                            <code>Create an array called fruits with values ["apple", "banana", "orange"]</code><br>
+                            <code>Say fruits[0]</code> → outputs "apple" (first item)<br>
+                            <code>Say fruits[1]</code> → outputs "banana" (second item)<br>
+                            <code>Say fruits[2]</code> → outputs "orange" (third item)
+                        </div>
+
+                        <h4>Modifying Arrays</h4>
+                        <div class="syntax-example">
+                            <strong>Change an element:</strong><br>
+                            <code>Set scores[0] to 95</code><br>
+                            <code>Set names[1] to "Robert"</code><br><br>
+
+                            <strong>Add to end of array:</strong><br>
+                            <code>Add 100 to scores</code><br>
+                            <code>Add "David" to names</code><br><br>
+
+                            <strong>Get array length:</strong><br>
+                            <code>Say length of scores</code><br>
+                            <code>Create a number called count with value length of names</code>
+                        </div>
+
+                        <h4>Looping Through Arrays</h4>
+                        <div class="syntax-example">
+                            <strong>Using For Each:</strong><br>
+                            <code>Create an array called numbers with values [1, 2, 3, 4, 5]</code><br>
+                            <code>For each num in numbers:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say num times 2</code><br><br>
+
+                            <strong>Using While with index:</strong><br>
+                            <code>Create a number called i with value 0</code><br>
+                            <code>While i is less than length of numbers:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say numbers[i]</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase i by 1</code>
+                        </div>
+
+                        <h4>Array Operations</h4>
+                        <div class="syntax-example">
+                            <strong>Sum all elements:</strong><br>
+                            <code>Create an array called nums with values [10, 20, 30, 40]</code><br>
+                            <code>Create a number called total with value 0</code><br>
+                            <code>For each n in nums:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Set total to total plus n</code><br>
+                            <code>Say "Total: " plus total</code><br><br>
+
+                            <strong>Find maximum:</strong><br>
+                            <code>Create a number called max with value nums[0]</code><br>
+                            <code>For each n in nums:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;If n is greater than max:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set max to n</code><br>
+                            <code>Say "Maximum: " plus max</code>
+                        </div>
+
+                        <h4>Practice Exercise 9</h4>
+                        <div class="syntax-example">
+                            <strong>Calculate average grade:</strong><br>
+                            <code>Create an array called grades with values [85, 90, 78, 92, 88]</code><br>
+                            <code>Create a number called sum with value 0</code><br>
+                            <code>For each grade in grades:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Set sum to sum plus grade</code><br>
+                            <code>Create a number called average with value sum divided by length of grades</code><br>
+                            <code>Say "Average grade: " plus average</code>
+                        </div>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="lesson-10">
+                        <h2>Lesson 10: Comments - Documenting Your Code</h2>
+                        <p><strong>Why comments?</strong> Comments explain what your code does. They're notes for yourself and others who read your code.</p>
+
+                        <h4>Single-Line Comments</h4>
+                        <div class="syntax-example">
+                            <code># This is a comment - it's ignored by the program</code><br>
+                            <code>Create a number called age with value 25  # Store user's age</code><br>
+                            <code>Say "Hello"  # Greet the user</code>
+                        </div>
+
+                        <h4>When to Use Comments</h4>
+                        <ul>
+                            <li><strong>Explain complex logic:</strong> "# Check if number is prime"</li>
+                            <li><strong>Describe purpose:</strong> "# Calculate monthly payment"</li>
+                            <li><strong>Mark sections:</strong> "# --- User Input Section ---"</li>
+                            <li><strong>Leave notes:</strong> "# TODO: Add error checking"</li>
+                            <li><strong>Disable code temporarily:</strong> "# Say debugInfo"</li>
+                        </ul>
+
+                        <div class="syntax-example">
+                            <strong>Example with good comments:</strong><br>
+                            <code># Calculate circle area</code><br>
+                            <code># Formula: area = π × radius²</code><br>
+                            <code>Create a number called pi with value 3.14159</code><br>
+                            <code>Create a number called radius with value 5</code><br>
+                            <code>Create a number called area with value pi times radius times radius</code><br>
+                            <code>Say "Circle area: " plus area</code>
+                        </div>
+
+                        <h4>Comment Best Practices</h4>
+                        <ul>
+                            <li>Write clear, concise comments</li>
+                            <li>Explain WHY, not just WHAT</li>
+                            <li>Update comments when you update code</li>
+                            <li>Don't over-comment obvious code</li>
+                        </ul>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="advanced">
+                        <h2>Advanced Topics</h2>
+
+                        <h4>Combining Everything</h4>
+                        <p>Real programs combine all these concepts. Here's a complete example:</p>
+                        <div class="syntax-example">
+                            <code># Student grade management system</code><br>
+                            <code>Create an array called students with values ["Alice", "Bob", "Charlie"]</code><br>
+                            <code>Create an array called grades with values [85, 92, 78]</code><br><br>
+
+                            <code># Function to determine letter grade</code><br>
+                            <code>Define function getLetterGrade with parameter score:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;If score is greater than or equal to 90:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "A"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else if score is greater than or equal to 80:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "B"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else if score is greater than or equal to 70:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "C"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Else:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "F"</code><br><br>
+
+                            <code># Display all student grades</code><br>
+                            <code>Create a number called i with value 0</code><br>
+                            <code>While i is less than length of students:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Create a text called name with value students[i]</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Create a number called score with value grades[i]</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Create a text called letter with value getLetterGrade(score)</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;Say name plus ": " plus score plus " (" plus letter plus ")"</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase i by 1</code>
+                        </div>
+
+                        <h4>Problem-Solving Approach</h4>
+                        <ol>
+                            <li><strong>Understand the problem:</strong> What do you need to accomplish?</li>
+                            <li><strong>Break it down:</strong> What smaller steps are needed?</li>
+                            <li><strong>Choose the right tools:</strong> Do you need loops? Functions? Arrays?</li>
+                            <li><strong>Write pseudocode:</strong> Plan in plain language first</li>
+                            <li><strong>Code incrementally:</strong> Write small pieces, test often</li>
+                            <li><strong>Debug:</strong> Use the Step feature to find issues</li>
+                            <li><strong>Refine:</strong> Make your code clearer and more efficient</li>
+                        </ol>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="ide-features">
+                        <h2>Using the FlowScript IDE</h2>
+
+                        <h4>Control Buttons</h4>
+                        <ul>
+                            <li><strong>Run:</strong> Execute your entire program</li>
+                            <li><strong>Step:</strong> Run one line at a time (debugging)</li>
+                            <li><strong>Pause:</strong> Pause execution during step mode</li>
+                            <li><strong>Stop:</strong> Halt the program</li>
+                            <li><strong>Clear:</strong> Reset the editor</li>
+                            <li><strong>Examples:</strong> Load pre-written programs</li>
+                            <li><strong>Format:</strong> Auto-indent your code</li>
+                        </ul>
+
+                        <h4>Output Tabs</h4>
+                        <ul>
+                            <li><strong>Output:</strong> See what your program displays</li>
+                            <li><strong>Flowchart:</strong> Visual diagram of program flow</li>
+                            <li><strong>Translations:</strong> See equivalent Python, Java, JavaScript, C++ code</li>
+                            <li><strong>Syntax Tree:</strong> How FlowScript parses your code</li>
+                            <li><strong>Variables:</strong> Monitor all variable values</li>
+                            <li><strong>Tokens:</strong> See how code is broken into tokens</li>
+                        </ul>
+
+                        <h4>Tips for Success</h4>
+                        <ul>
+                            <li>Start with simple programs and gradually add complexity</li>
+                            <li>Use the Examples to learn new techniques</li>
+                            <li>Check the Flowchart to visualize your logic</li>
+                            <li>Use Step mode to understand how your code executes</li>
+                            <li>Read error messages carefully - they tell you what's wrong</li>
+                            <li>Adjust font size for comfortable coding</li>
+                            <li>Save your favorite programs by copying them</li>
+                        </ul>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section" id="quick-reference">
+                        <h2>Quick Reference Cheat Sheet</h2>
+                        
+                        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                            <thead>
+                                <tr style="background: #f1f5f9; border-bottom: 2px solid var(--color-border);">
+                                    <th style="padding: 0.75rem; text-align: left; width: 30%;">Concept</th>
+                                    <th style="padding: 0.75rem; text-align: left;">Syntax</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Number Variable</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Create a number called x with value 10</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Text Variable</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Create a text called name with value "Alice"</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Boolean Variable</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Create a boolean called isActive with value true</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Output</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Say "Hello"</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Addition</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a plus b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Subtraction</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a minus b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Multiplication</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a times b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Division</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a divided by b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Greater Than</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a is greater than b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Less Than</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a is less than b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Equals</strong></td>
+                                    <td style="padding: 0.75rem;"><code>a equals b</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>AND</strong></td>
+                                    <td style="padding: 0.75rem;"><code>condition1 AND condition2</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>OR</strong></td>
+                                    <td style="padding: 0.75rem;"><code>condition1 OR condition2</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>If (single-line)</strong></td>
+                                    <td style="padding: 0.75rem;"><code>If condition then action</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>If (multi-line)</strong></td>
+                                    <td style="padding: 0.75rem;"><code>If condition:<br>&nbsp;&nbsp;&nbsp;&nbsp;action</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>If-Else</strong></td>
+                                    <td style="padding: 0.75rem;"><code>If condition:<br>&nbsp;&nbsp;&nbsp;&nbsp;action1<br>Else:<br>&nbsp;&nbsp;&nbsp;&nbsp;action2</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Repeat Loop</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Repeat 5 times: action</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>While Loop</strong></td>
+                                    <td style="padding: 0.75rem;"><code>While condition:<br>&nbsp;&nbsp;&nbsp;&nbsp;action</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>For Each Loop</strong></td>
+                                    <td style="padding: 0.75rem;"><code>For each item in array:<br>&nbsp;&nbsp;&nbsp;&nbsp;action</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Function</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Define function name with parameter p:<br>&nbsp;&nbsp;&nbsp;&nbsp;action</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Call Function</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Call functionName with value</code></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.75rem;"><strong>Array</strong></td>
+                                    <td style="padding: 0.75rem;"><code>Create an array called arr with values [1, 2, 3]</code></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem;"><strong>Comment</strong></td>
+                                    <td style="padding: 0.75rem;"><code># This is a comment</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr style="border: 1px solid var(--color-border); margin: 2rem 0;">
+
+                    <div class="manual-section">
+                        <h2>Final Challenge Project</h2>
+                        <p>Now that you've learned all the concepts, try building a complete program that uses everything:</p>
+                        
+                        <div class="syntax-example">
+                            <strong>Build a Quiz Game:</strong><br>
+                            <ul>
+                                <li>Create arrays for questions and answers</li>
+                                <li>Use a loop to ask each question</li>
+                                <li>Use conditionals to check if answers are correct</li>
+                                <li>Keep track of the score</li>
+                                <li>Use a function to display the final result</li>
+                                <li>Add comments to explain your logic</li>
+                            </ul>
+                        </div>
+
+                        <p style="margin-top: 2rem;"><strong>Remember:</strong> Programming is a skill that improves with practice. Start simple, experiment often, and don't be afraid to make mistakes - they're the best teachers!</p>
+                        
+                        <p style="margin-top: 1rem; padding: 1rem; background: #e0e7ff; border-left: 4px solid #4f46e5; border-radius: 0.25rem;">
+                            <strong>Happy Coding!</strong> The FlowScript community believes that everyone can learn to program. Take your time, practice regularly, and enjoy the journey of creating with code.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <div class="status-bar">
+            <span>FlowScript Learning Guide v1.0 - From Beginner to Builder</span>
+            <span><a href="index.html" style="color: #4f46e5; text-decoration: none;">Try it in the IDE →</a></span>
+        </div>
+    </div>
+</body>
+</html>

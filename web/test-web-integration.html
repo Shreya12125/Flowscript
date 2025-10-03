@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowScript Web Integration Test</title>
+</head>
+<body>
+    <div id="testResults"></div>
+    
+    <script src="flowscript-bundle.js"></script>
+    <script>
+        // Test the web integration
+        function runTests() {
+            const results = document.getElementById('testResults');
+            let passCount = 0;
+            let failCount = 0;
+            
+            const testCases = [
+                {
+                    name: 'Variable Declaration',
+                    code: 'Create a number called x with value 42',
+                    expected: { variables: { x: { type: 'number', value: 42 } } }
+                },
+                {
+                    name: 'Simple Output',
+                    code: 'Say "Hello World"',
+                    expected: { output: ['Hello World'] }
+                },
+                {
+                    name: 'Variable Output',
+                    code: `Create a text called name with value "Alice"
+Say "Hello " plus name`,
+                    expected: { output: ['Hello Alice'] }
+                }
+            ];
+            
+            testCases.forEach(test => {
+                try {
+                    const interpreter = new SimpleFlowScriptInterpreter();
+                    const result = interpreter.interpret(test.code);
+                    
+                    let passed = true;
+                    if (test.expected.output) {
+                        passed = JSON.stringify(result.output) === JSON.stringify(test.expected.output);
+                    }
+                    
+                    if (passed) {
+                        passCount++;
+                        results.innerHTML += `<div style="color: green;">✅ ${test.name}: PASS</div>`;
+                    } else {
+                        failCount++;
+                        results.innerHTML += `<div style="color: red;">❌ ${test.name}: FAIL</div>`;
+                    }
+                } catch (error) {
+                    failCount++;
+                    results.innerHTML += `<div style="color: red;">❌ ${test.name}: ERROR - ${error.message}</div>`;
+                }
+            });
+            
+            results.innerHTML += `<br><strong>Results: ${passCount} passed, ${failCount} failed</strong>`;
+        }
+        
+        runTests();
+    </script>
+</body>
+</html>

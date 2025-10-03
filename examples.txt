@@ -1,0 +1,255 @@
+# FlowScript Examples - Comprehensive Learning Collection
+
+## Basic Variables and Data Types
+Create a number called age with value 25
+Create a text called name with value "Alice"
+Create a boolean called isStudent with value true
+Create a list called scores with values [85, 92, 78, 95, 88]
+
+## Arithmetic Operations
+Create a number called x with value 10
+Create a number called y with value 3
+Create a number called sum with value x plus y
+Create a number called product with value x times y
+Create a number called quotient with value x divided by y
+Create a number called difference with value x minus y
+
+## Comparison Operations
+if x is greater than y then say "X is greater than Y"
+if y is less than x then say "Y is less than X"
+if x equals y then say "X equals Y"
+if x >= 5 and x <= 15 then say "X is between 5 and 15"
+
+## Logical Operations
+Create a boolean called hasLicense with value true
+Create a number called age with value 20
+if age >= 18 and hasLicense equals true then say "Can drive!"
+else say "Cannot drive!"
+
+## Simple Loops
+Create a number called counter with value 1
+while counter <= 5:
+    say counter
+    increase counter by 1
+
+## Function Definitions
+Define function greet with parameter name:
+    say "Hello " plus name
+
+Define function add with parameters a and b:
+    return a plus b
+
+## Recursive Functions
+Define function factorial with parameter n:
+    if n <= 1 then return 1
+    else return n times factorial(n minus 1)
+
+Define function fibonacci with parameter n:
+    if n <= 1 then return n
+    else:
+        Create a number called a with value n minus 1
+        Create a number called b with value n minus 2
+        Create a number called fib1 with value fibonacci(a)
+        Create a number called fib2 with value fibonacci(b)
+        return fib1 plus fib2
+
+## Array Operations
+Create a list called numbers with values [10, 20, 30, 40, 50]
+say "First element:"
+say numbers[0]
+say "Third element:"
+say numbers[2]
+
+Create a number called sum with value 0
+Create a number called i with value 0
+while i < 5:
+    sum = sum plus numbers[i]
+    increase i by 1
+say "Sum of array:"
+say sum
+
+## String Manipulation
+Create a text called firstName with value "John"
+Create a text called lastName with value "Doe"
+Create a text called fullName with value firstName plus " " plus lastName
+say "Full name:"
+say fullName
+
+## Mathematical Computations
+Define function square with parameter n:
+    return n times n
+
+Define function cube with parameter n:
+    Create a number called sq with value n times n
+    return sq times n
+
+Create a number called num with value 5
+say "Square of 5:"
+say square(num)
+say "Cube of 5:"
+say cube(num)
+
+## Nested Loops
+say "Multiplication Table:"
+Create a number called i with value 1
+while i <= 3:
+    Create a number called j with value 1
+    while j <= 3:
+        Create a number called product with value i times j
+        say product
+        increase j by 1
+    say "---"
+    increase i by 1
+
+## Advanced Conditionals
+Create a number called temperature with value 25
+Create a boolean called isRaining with value false
+
+if temperature is greater than 30:
+    say "It's hot outside!"
+    if isRaining equals true then say "Hot and rainy!"
+    else say "Hot and dry!"
+else:
+    if temperature is less than 10 then say "It's cold!"
+    else say "Pleasant temperature!"
+
+## Data Processing
+Create a list called grades with values [88, 92, 76, 95, 84]
+Create a number called total with value 0
+Create a number called count with value 5
+
+Create a number called i with value 0
+while i < count:
+    total = total plus grades[i]
+    increase i by 1
+
+Create a number called average with value total divided by count
+say "Average grade:"
+say average
+
+if average >= 90 then say "Performance: Excellent"
+else:
+    if average >= 80 then say "Performance: Good"
+    else say "Performance: Needs Work"
+
+## Algorithm Examples
+
+### Find Maximum Value
+Create a list called numbers with values [45, 23, 89, 12, 67]
+Create a number called max with value numbers[0]
+Create a number called i with value 1
+
+while i < 5:
+    Create a number called current with value numbers[i]
+    if current is greater than max then max = current
+    increase i by 1
+
+say "Maximum value:"
+say max
+
+### Even/Odd Checker
+Define function checkEvenOdd with parameter num:
+    Create a number called remainder with value num divided by 2
+    Create a number called doubled with value remainder times 2
+    if doubled equals num then say "Even"
+    else say "Odd"
+
+Create a number called i with value 1
+while i <= 10:
+    say i
+    checkEvenOdd(i)
+    increase i by 1
+
+### Prime Number Checker
+Define function isPrime with parameter n:
+    if n <= 1 then return 0
+    if n <= 3 then return 1
+    Create a number called i with value 2
+    while i times i <= n:
+        Create a number called mod with value n divided by i
+        Create a number called check with value mod times i
+        if check equals n then return 0
+        increase i by 1
+    return 1
+
+Create a number called num with value 17
+Create a number called result with value isPrime(num)
+if result equals 1 then say "Is Prime!"
+else say "Not Prime"
+
+### Countdown Timer
+Create a number called count with value 10
+while count >= 0:
+    say count
+    if count equals 0 then say "Blast off!"
+    count = count minus 1
+
+### Temperature Converter
+Define function celsiusToFahrenheit with parameter c:
+    Create a number called temp with value c times 9
+    temp = temp divided by 5
+    temp = temp plus 32
+    return temp
+
+Create a number called celsius with value 25
+Create a number called fahrenheit with value celsiusToFahrenheit(celsius)
+say "Celsius:"
+say celsius
+say "Fahrenheit:"
+say fahrenheit
+
+### Power Function
+Define function power with parameter base:
+    return base times base times base
+
+Create a number called num with value 4
+Create a number called result with value power(num)
+say "4 cubed:"
+say result
+
+### Sum Array Elements
+Create a list called values with values [5, 10, 15, 20, 25]
+Create a number called total with value 0
+Create a number called index with value 0
+
+while index < 5:
+    total = total plus values[index]
+    increase index by 1
+
+say "Total sum:"
+say total
+
+## Complete Application Example
+say "=== Student Grade Calculator ==="
+
+Create a list called studentScores with values [88, 92, 76, 95, 84, 90, 87]
+Create a number called numStudents with value 7
+
+Create a number called totalScore with value 0
+Create a number called i with value 0
+while i < numStudents:
+    totalScore = totalScore plus studentScores[i]
+    increase i by 1
+
+Create a number called averageScore with value totalScore divided by numStudents
+say "Average Score:"
+say averageScore
+
+if averageScore >= 90 then say "Grade: A"
+else:
+    if averageScore >= 80 then say "Grade: B"
+    else:
+        if averageScore >= 70 then say "Grade: C"
+        else say "Grade: F"
+
+Create a number called maxScore with value studentScores[0]
+Create a number called j with value 1
+while j < numStudents:
+    if studentScores[j] is greater than maxScore then maxScore = studentScores[j]
+    increase j by 1
+
+say "Highest Score:"
+say maxScore
+
+say "=== Program Complete ==="
+

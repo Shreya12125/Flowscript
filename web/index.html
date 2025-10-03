@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowScript IDE - Advanced Natural Language Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">FlowScript IDE</h1>
+                <p class="subtitle">Advanced Natural Language Programming Environment</p>
+            </div>
+            <div class="header-actions">
+    <button id="runBtn" class="btn btn-primary">
+        <span class="btn-icon">▶</span>
+        Run Program
+    </button>
+    <button id="stepBtn" class="btn btn-secondary" style="display: none;">
+        <span class="btn-icon">⏭</span>
+        Step
+    </button>
+    <button id="pauseBtn" class="btn btn-secondary" style="display: none;">
+        <span class="btn-icon">⏸</span>
+        Pause
+    </button>
+    <button id="stopBtn" class="btn btn-secondary" style="display: none;">
+        <span class="btn-icon">⏹</span>
+        Stop
+    </button>
+    <button id="clearBtn" class="btn btn-secondary">
+        <span class="btn-icon">🗑</span>
+        Clear
+    </button>
+    <button id="examplesBtn" class="btn btn-secondary">
+        <span class="btn-icon">📚</span>
+        Examples
+    </button>
+    <a href="help.html" class="btn btn-secondary">
+        <span class="btn-icon">❓</span>
+        Help
+    </a>
+    
+</div>
+        </header>
+
+        <main class="main">
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <h3>User Manual</h3>
+                    <button id="toggleManual" class="btn-small">Hide</button>
+                </div>
+                <div class="manual-content">
+                    <div class="manual-section">
+                        <h4>Getting Started</h4>
+                        <p>FlowScript uses natural language syntax:</p>
+                        <ul>
+                            <li><strong>Variables:</strong> <code>Create a number called x with value 10</code></li>
+                            <li><strong>Functions:</strong> <code>Define function add with parameters a and b</code></li>
+                            <li><strong>Loops:</strong> <code>while condition: do something</code></li>
+                            <li><strong>Conditions:</strong> <code>if condition then do this</code></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="manual-section">
+                        <h4> Basic Syntax</h4>
+                        <div class="syntax-example">
+                            <strong>Variables:</strong><br>
+                            <code>Create a number called age with value 25</code><br>
+                            <code>Create a text called name with value "Alice"</code><br>
+                            <code>Create a boolean called isStudent with value true</code>
+                        </div>
+                        
+                        <div class="syntax-example">
+                            <strong>Functions:</strong><br>
+                            <code>Define function greet with parameter name:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say "Hello " plus name</code>
+                        </div>
+                        
+                        <div class="syntax-example">
+                            <strong>Loops:</strong><br>
+                            <code>while counter < 10:</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;say counter</code><br>
+                            <code>&nbsp;&nbsp;&nbsp;&nbsp;increase counter by 1</code>
+                        </div>
+                    </div>
+                    
+                    <div class="manual-section">
+                        <h4> Features</h4>
+                        <ul>
+                            <li><strong>▶Run:</strong> Execute your program</li>
+                            <li><strong>⏭Step:</strong> Debug step-by-step</li>
+                            <li><strong>Flowchart:</strong> Visual program flow</li>
+                            <li><strong>Translations:</strong> Convert to Python, Java, JS, C++</li>
+                            <li><strong> Examples:</strong> Pre-written programs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="manual-section">
+                        <h4>💡 Tips</h4>
+                        <ul>
+                            <li>Use <code>say</code> to display output</li>
+                            <li>Indent code inside functions and loops</li>
+                            <li>Use <code>then</code> for single-line conditions</li>
+                            <li>Click flowchart nodes to highlight them</li>
+                            <li>Adjust font size for better readability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="editor-section">
+                <div class="section-header">
+                    <h3>FlowScript Editor</h3>
+                    <div class="editor-controls">
+                        <span id="lineCount" class="line-count">Lines: 1</span>
+                        <div class="font-controls">
+                            <label for="fontSize">Font:</label>
+                            <select id="fontSize" class="btn-small">
+                                <option value="0.75rem">Small</option>
+                                <option value="0.875rem" selected>Medium</option>
+                                <option value="1rem">Large</option>
+                                <option value="1.125rem">X-Large</option>
+                            </select>
+                        </div>
+                        <button id="formatBtn" class="btn-small">Format</button>
+                    </div>
+                </div>
+                <div class="editor-container">
+                    <div id="lineNumbers" class="line-numbers">1</div>
+                    <textarea 
+                        id="codeEditor" 
+                        class="code-editor"
+                        placeholder="Write your advanced FlowScript program here...
+
+Examples:
+- Create a number called x with value 10
+- Define function factorial with parameter n: if n <= 1 then return 1, else return n times factorial(n minus 1)
+- While counter < 10: say counter, increase counter by 1"
+                        spellcheck="false"
+                        autocomplete="off"
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="output">Output</button>
+                    <button class="tab-btn" data-tab="flowchart">Flowchart</button>
+                    <button class="tab-btn" data-tab="translations">Translations</button>
+                    <button class="tab-btn" data-tab="ast">Syntax Tree</button>
+                    <button class="tab-btn" data-tab="variables">Variables</button>
+                    <button class="tab-btn" data-tab="tokens">Tokens</button>
+                    
+                </div>
+
+                <div class="tab-content">
+                    <div id="outputTab" class="tab-panel active">
+                        <div class="section-header">
+                            <h3>Program Output</h3>
+                            <div>
+                                <button id="copyOutputBtn" class="btn-small">Copy</button>
+                                <button id="clearOutputBtn" class="btn-small">Clear Output</button>
+                            </div>
+                        </div>
+                        <div id="output" class="output-display">Ready to run advanced FlowScript programs...</div>
+                    </div>
+
+                    <div id="flowchartTab" class="tab-panel">
+                        <div class="section-header">
+                            <h3>Program Flowchart</h3>
+                        </div>
+                        <div id="flowchartDisplay" class="flowchart-display">Flowchart will appear here after running...</div>
+                    </div>
+
+                    <div id="translationsTab" class="tab-panel">
+                        <div class="section-header">
+                            <h3>Code Translations</h3>
+                            <select id="languageSelect" class="btn-small">
+                                <option value="python">Python</option>
+                                <option value="java">Java</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="cpp">C++</option>
+                            </select>
+                            <button id="copyTranslationBtn" class="btn-small">Copy</button>
+                        </div>
+                        <div id="translationsDisplay" class="translations-display">Translations will appear here...</div>
+                    </div>
+
+                    <div id="astTab" class="tab-panel">
+                        <div class="section-header">
+                            <h3>Abstract Syntax Tree</h3>
+                        </div>
+                        <div id="astDisplay" class="ast-display">AST will appear here after parsing...</div>
+                    </div>
+
+                    <div id="variablesTab" class="tab-panel">
+                        <div class="section-header">
+                            <h3>Variables & Functions</h3>
+                        </div>
+                        <div id="variablesDisplay" class="variables-display">Variables and functions will appear here...</div>
+                    </div>
+
+                    <div id="tokensTab" class="tab-panel">
+                        <div class="section-header">
+                            <h3>Lexical Tokens</h3>
+                        </div>
+                        <div id="tokensDisplay" class="tokens-display">Tokens will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="status-bar">
+            <span id="statusText">Ready</span>
+            <span id="executionTime"></span>
+        </div>
+    </div>
+
+    <div id="examplesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Advanced FlowScript Examples</h2>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="examples-grid">
+                    <div class="example-card" data-example="variables-basics">
+                        <h4>Variables Basics</h4>
+                        <p>Learn about data types and variables</p>
+                    </div>
+                    <div class="example-card" data-example="arithmetic">
+                        <h4>Arithmetic Operations</h4>
+                        <p>Basic math operations</p>
+                    </div>
+                    <div class="example-card" data-example="comparison">
+                        <h4>Comparison Operations</h4>
+                        <p>Greater than, less than, equals</p>
+                    </div>
+                    <div class="example-card" data-example="logical-operators">
+                        <h4>Logical Operators</h4>
+                        <p>AND, OR logic tests</p>
+                    </div>
+                    <div class="example-card" data-example="conditionals">
+                        <h4>Complex Conditionals</h4>
+                        <p>Nested if-else, logical operators</p>
+                    </div>
+                    <div class="example-card" data-example="loops">
+                        <h4>Advanced Loops</h4>
+                        <p>While loops, for-each, nested iterations</p>
+                    </div>
+                    <div class="example-card" data-example="functions">
+                        <h4>Functions & Recursion</h4>
+                        <p>Function definitions and recursive calls</p>
+                    </div>
+                    <div class="example-card" data-example="arrays">
+                        <h4>Arrays & Data Structures</h4>
+                        <p>Lists, arrays, and data manipulation</p>
+                    </div>
+                    <div class="example-card" data-example="fibonacci">
+                        <h4>Fibonacci Sequence</h4>
+                        <p>Classic recursive algorithm</p>
+                    </div>
+                    <div class="example-card" data-example="array-operations">
+                        <h4>Array Operations</h4>
+                        <p>Sum, average, array processing</p>
+                    </div>
+                    <div class="example-card" data-example="string-operations">
+                        <h4>String Manipulation</h4>
+                        <p>Concatenation and text processing</p>
+                    </div>
+                    <div class="example-card" data-example="mathematical">
+                        <h4>Mathematical Computations</h4>
+                        <p>Square, cube, power functions</p>
+                    </div>
+                    <div class="example-card" data-example="nested-loops">
+                        <h4>Nested Loops</h4>
+                        <p>Multiplication tables and patterns</p>
+                    </div>
+                    <div class="example-card" data-example="advanced-conditionals">
+                        <h4>Advanced Conditionals</h4>
+                        <p>Complex decision making</p>
+                    </div>
+                    <div class="example-card" data-example="data-processing">
+                        <h4>Data Processing</h4>
+                        <p>Student grade system</p>
+                    </div>
+                    <div class="example-card" data-example="max-finder">
+                        <h4>Find Maximum</h4>
+                        <p>Algorithm to find max value</p>
+                    </div>
+                    <div class="example-card" data-example="even-odd">
+                        <h4>Even/Odd Checker</h4>
+                        <p>Check if number is even or odd</p>
+                    </div>
+                    <div class="example-card" data-example="prime-checker">
+                        <h4>Prime Number Checker</h4>
+                        <p>Test if number is prime</p>
+                    </div>
+                    <div class="example-card" data-example="countdown">
+                        <h4>Countdown Timer</h4>
+                        <p>Count down from 10 to 0</p>
+                    </div>
+                    <div class="example-card" data-example="sum-list">
+                        <h4>Sum Array Elements</h4>
+                        <p>Calculate total of array values</p>
+                    </div>
+                    <div class="example-card" data-example="power-function">
+                        <h4>Power Function</h4>
+                        <p>Calculate powers and cubes</p>
+                    </div>
+                    <div class="example-card" data-example="temperature-converter">
+                        <h4>Temperature Converter</h4>
+                        <p>Celsius to Fahrenheit conversion</p>
+                    </div>
+                    <div class="example-card" data-example="bubble-sort">
+                        <h4>Bubble Sort</h4>
+                        <p>Classic sorting algorithm</p>
+                    </div>
+                    <div class="example-card" data-example="binary-search">
+                        <h4>Binary Search</h4>
+                        <p>Efficient search algorithm</p>
+                    </div>
+                    <div class="example-card" data-example="palindrome-checker">
+                        <h4>Palindrome Checker</h4>
+                        <p>Check if word reads same forwards/backwards</p>
+                    </div>
+                    <div class="example-card" data-example="fibonacci-iterative">
+                        <h4>Fibonacci (Iterative)</h4>
+                        <p>Fibonacci sequence without recursion</p>
+                    </div>
+                    <div class="example-card" data-example="gcd-calculator">
+                        <h4>GCD Calculator</h4>
+                        <p>Greatest Common Divisor algorithm</p>
+                    </div>
+                    <div class="example-card" data-example="prime-generator">
+                        <h4>Prime Generator</h4>
+                        <p>Generate prime numbers</p>
+                    </div>
+                    <div class="example-card" data-example="calculator">
+                        <h4>Calculator</h4>
+                        <p>Basic arithmetic calculator</p>
+                    </div>
+                    <div class="example-card" data-example="guessing-game">
+                        <h4>Guessing Game</h4>
+                        <p>Number guessing game logic</p>
+                    </div>
+                    <div class="example-card" data-example="vowel-counter">
+                        <h4>Vowel Counter</h4>
+                        <p>Count vowels in text</p>
+                    </div>
+                    <div class="example-card" data-example="reverse-string">
+                        <h4>String Reversal</h4>
+                        <p>Reverse text strings</p>
+                    </div>
+                    <div class="example-card" data-example="leap-year">
+                        <h4>Leap Year Checker</h4>
+                        <p>Check if year is leap year</p>
+                    </div>
+                    <div class="example-card" data-example="armstrong-number">
+                        <h4>Armstrong Number</h4>
+                        <p>Check Armstrong numbers</p>
+                    </div>
+                    <div class="example-card" data-example="perfect-number">
+                        <h4>Perfect Number</h4>
+                        <p>Check perfect numbers</p>
+                    </div>
+                    <div class="example-card" data-example="factorial-table">
+                        <h4>Factorial Table</h4>
+                        <p>Generate factorial table</p>
+                    </div>
+                    <div class="example-card" data-example="fibonacci-table">
+                        <h4>Fibonacci Table</h4>
+                        <p>Generate Fibonacci table</p>
+                    </div>
+                    <div class="example-card" data-example="number-patterns">
+                        <h4>Number Patterns</h4>
+                        <p>Square and triangular numbers</p>
+                    </div>
+                    <div class="example-card" data-example="text-analysis">
+                        <h4>Text Analysis</h4>
+                        <p>Analyze text characteristics</p>
+                    </div>
+                    <div class="example-card" data-example="simple-database">
+                        <h4>Database Simulation</h4>
+                        <p>Simple student database</p>
+                    </div>
+                    <div class="example-card" data-example="game-simulation">
+                        <h4>Game Simulation</h4>
+                        <p>Simple game logic</p>
+                    </div>
+                    <div class="example-card" data-example="complete">
+                        <h4>Complete Application</h4>
+                        <p>Full program with all features</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="flowscript-advanced.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "flowscript",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "FlowScript Natural Language Programming Education Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-day2.js",
+    "test-lexer": "node src/lexer-test.js",
+    "test-parser": "node src/parser-test.js"
+  },
+  "keywords": ["flowscript", "education", "programming", "natural-language"],
+  "author": "Your Name",
+  "license": "MIT"
+}
