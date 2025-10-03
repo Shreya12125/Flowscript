@@ -101,6 +101,9 @@ Register custom translators at runtime:
 ```js
 translator.registerTranslator('kotlin', new KotlinTranslator());
 ```
+## Contributors
+- [shruti-sivakumar](https://github.com/shruti-sivakumar)  
+- [Vida181105](https://github.com/Vida181105)
 
 Web playground
 ~~~~~~~~~~~~~~
@@ -163,6 +166,6 @@ Roadmap (What to improve next)
 
 License
 -------
-MIT (or your chosen license). Update this section as appropriate.
+MIT
 
 
